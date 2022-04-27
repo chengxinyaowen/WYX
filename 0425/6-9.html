@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1~100奇数和 -->
+    <!-- 1~100偶数和 -->
+    <!-- 1-100间的3的倍数和 -->
+    <!-- 求100以内数字之和 -->
+</body>
+<script>
+    // 1~100奇数和
+    var s=0;
+    for(var i=0;i<=100;i++){
+        if(i%2!=0){
+            s+=i;
+        }
+    }
+    console.log(s);
+    document.write("1~100奇数和="+s);
+    document.write("<hr>")
+
+    // 1~100偶数和
+    var s=0;
+    for(var i=0;i<=100;i++){
+        if(i%2==0){
+            s+=i;
+        }
+    }
+    console.log(s);
+    document.write("1~100偶数和="+s);
+    document.write("<hr>")
+
+    // 1-100间的3的倍数和
+    var s=0;
+    for(var i=0;i<=100;i++){
+        if(i%3==0){
+            s+=i;
+        }
+    }
+    console.log(s);
+    document.write("1~100间的3的倍数和="+s);
+    document.write("<hr>")
+
+    // 求100以内数字之和
+    var s=0;
+    for(var i=0;i<=100;i++){
+        s+=i
+    }
+    console.log(s);
+    document.write("100以内数字之和="+s);
+</script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 格式化 -->
+    <div>
+        <label for="num1">请输入要格式化的数字:</label>
+        <input type="text" id="num1"><br>
+        <label for="numLength">请输入要格式化的长度:</label>
+        <input type="text" id="numLength"><br>
+        <label for="num2">请输入要格式化的数字:</label>
+        <input type="text" id="num2"><br>
+        <button id="translate">转化</button>
+        <button id="reset">重置</button>
+    </div>
+</body>
+<script>
+    var translate=document.getElementById("translate");
+    var reset=document.getElementById("reset");
+    var deal=function(num,length){
+        if((num+"").length>=length){
+            return num;
+        }
+        return deal("0"+num,length)
+    }
+    translate.onclick=function(){
+        var num1=document.getElementById("num1").value;
+        var length=document.getElementById("numLength").value;
+        // console.log(num1)
+        var num2=deal(num1,length)
+        document.getElementById("num2").value=num2;
+    }
+    reset.onclick=function(){
+        var inputs=document.getElementsByTagName("input");
+        for(var i=0;i<inputs.length;i++){
+            inputs[i].value="";
+        }
+    }
+
+</script>
+</html>

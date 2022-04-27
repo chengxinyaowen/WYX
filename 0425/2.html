@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 400px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- 生成指定位数的验证码。 -->
+    <div>
+        <label for="length">请输入验证码长度:</label>
+        <input type="text" id="length"><br>
+        <label for="num">验证码:</label>
+        <input type="text" id="num"><br>
+        <button>生成验证码</button>
+    </div>
+</body>
+<script>
+    var btn=document.getElementsByTagName("button")[0];
+    btn.onclick=function(){
+        var length=document.getElementById("length").value;
+        var num=clockon(length);
+        document.getElementById("num").value=num;
+    }
+    var clockon=function(length){
+        var num="";
+        for(var i=0;i<length;i++){
+            num+=parseInt(Math.random()*10)
+        }
+        return Number(num);
+    }
+</script>
+</html>
